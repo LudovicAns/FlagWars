@@ -1,0 +1,7 @@
+name: FlagWars
+version: '${project.version}'
+main: fr.ludovicans.flagwars.FlagWars
+api-version: 1.17
+prefix: FlagWars
+authors: [ LudovicAns ]
+website: https://github.com/LudovicAns
