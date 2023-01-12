@@ -6,7 +6,7 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Called when {@link GameInstance.State} of a {@link GameInstance} change.
+ * Appelé quand un {@link GameInstance.State} d'une {@link GameInstance} change.
  */
 @SuppressWarnings("unused")
 public final class GameStateChangeEvent extends Event {

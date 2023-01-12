@@ -3,7 +3,7 @@ package fr.ludovicans.flagwars.game;
 import org.bukkit.block.Sign;
 import org.jetbrains.annotations.NotNull;
 
-public class GameSign {
+public final class GameSign {
 
     @NotNull private final String id;
 

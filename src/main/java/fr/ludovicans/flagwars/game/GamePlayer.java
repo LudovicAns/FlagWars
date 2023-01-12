@@ -3,8 +3,11 @@ package fr.ludovicans.flagwars.game;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Représente un {@link Player} en jeu dans une {@link GameInstance}.
+ */
 @SuppressWarnings("unused")
-public class GamePlayer {
+public final class GamePlayer {
 
     public enum State {
         ALIVE, DEAD, SPECTATE

@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
  * Cette classe permet de gérer les PNJ en jeu.
  */
 @SuppressWarnings("unused")
-public class GamePNJ implements Listener {
+public final class GamePNJ implements Listener {
 
     private final @NotNull Location location;
     private final @Nullable String displayname;

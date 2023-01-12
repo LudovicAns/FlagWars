@@ -7,7 +7,7 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Called when a {@link GamePlayer} join a {@link GameInstance}.
+ * Appelé quand un {@link GamePlayer} rejoint une {@link GameInstance}.
  */
 @SuppressWarnings("unused")
 public final class GamePlayerLeaveEvent extends Event {

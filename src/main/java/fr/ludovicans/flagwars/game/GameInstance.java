@@ -5,8 +5,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+/**
+ * Représentation du jeu <strong>FlagWars</strong>.
+ */
 @SuppressWarnings("unused")
-public class GameInstance {
+public final class GameInstance {
 
     private @NotNull State gameState = State.LOBBY;
     private final @NotNull List<GameTeam> gameTeams;
@@ -25,4 +28,23 @@ public class GameInstance {
         LOBBY, START, PREPARATION, FLAGWAR, END, MAP_REGEN
     }
 
+    public @NotNull State getGameState() {
+        return gameState;
+    }
+
+    public @NotNull List<GameTeam> getGameTeams() {
+        return gameTeams;
+    }
+
+    public @NotNull List<GamePlayer> getGamePlayers() {
+        return gamePlayers;
+    }
+
+    public @NotNull Location getFlagSpawnPoint() {
+        return flagSpawnPoint;
+    }
+
+    public void setGameState(final @NotNull State gameState) {
+        this.gameState = gameState;
+    }
 }
