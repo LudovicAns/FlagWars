@@ -1,28 +1,25 @@
 package fr.ludovicans.flagwars.game.event;
 
 import fr.ludovicans.flagwars.game.GameInstance;
+import fr.ludovicans.flagwars.game.GamePlayer;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Called when {@link GameInstance.State} of a {@link GameInstance} change.
+ * Called when a {@link GamePlayer} join a {@link GameInstance}.
  */
 @SuppressWarnings("unused")
-public final class GameStateChangeEvent extends Event {
+public final class GamePlayerJoinEvent extends Event {
 
     private static final @NotNull HandlerList handlerList = new HandlerList();
 
     private final @NotNull GameInstance gameInstance;
-    private final @NotNull GameInstance.State oldState;
-    private final @NotNull GameInstance.State newState;
+    private final @NotNull GamePlayer gamePlayer;
 
-    public GameStateChangeEvent(@NotNull final GameInstance gameInstance,
-                                @NotNull final GameInstance.State oldState,
-                                @NotNull final GameInstance .State newState) {
+    public GamePlayerJoinEvent(@NotNull final GameInstance gameInstance, @NotNull final GamePlayer gamePlayer) {
         this.gameInstance = gameInstance;
-        this.oldState = oldState;
-        this.newState = newState;
+        this.gamePlayer = gamePlayer;
     }
 
     @Override
@@ -38,11 +35,7 @@ public final class GameStateChangeEvent extends Event {
         return gameInstance;
     }
 
-    public @NotNull GameInstance.State getOldState() {
-        return oldState;
-    }
-
-    public @NotNull GameInstance.State getNewState() {
-        return newState;
+    public @NotNull GamePlayer getGamePlayer() {
+        return gamePlayer;
     }
 }
