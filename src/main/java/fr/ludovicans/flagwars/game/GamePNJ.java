@@ -1,5 +1,7 @@
 package fr.ludovicans.flagwars.game;
 
+import fr.ludovicans.flagwars.FlagWars;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.Listener;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +19,8 @@ public final class GamePNJ implements Listener {
     public GamePNJ(@NotNull Location location, @Nullable String displayname) {
         this.location = location;
         this.displayname = displayname;
+
+        Bukkit.getServer().getPluginManager().registerEvents(this, FlagWars.getINSTANCE());
     }
 
     // Todo: custom trades

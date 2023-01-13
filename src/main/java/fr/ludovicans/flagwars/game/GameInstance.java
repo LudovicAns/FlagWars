@@ -12,20 +12,36 @@ import java.util.List;
 public final class GameInstance {
 
     private @NotNull State gameState = State.LOBBY;
+    private final @NotNull List<GamePlayer> gamePlayerList;
     private final @NotNull List<GameTeam> gameTeams;
     private final @NotNull List<GamePlayer> gamePlayers;
     private final @NotNull Location flagSpawnPoint;
+    private final @NotNull List<GamePNJ> gamePNJList;
+    private final @NotNull List<GameRessourceSpawner> gameRessourceSpawnerList;
+    private final @NotNull List<GameSign> gameSignList;
 
-    public GameInstance(@NotNull List<GameTeam> gameTeams,
-                        @NotNull List<GamePlayer> gamePlayers,
-                        @NotNull Location flagSpawnPoint) {
+    public GameInstance(@NotNull final List<GamePlayer> gamePlayerList,
+                        @NotNull final List<GameTeam> gameTeams,
+                        @NotNull final List<GamePlayer> gamePlayers,
+                        @NotNull final Location flagSpawnPoint,
+                        @NotNull final List<GamePNJ> gamePNJList,
+                        @NotNull final List<GameRessourceSpawner> gameRessourceSpawnerList,
+                        @NotNull final List<GameSign> gameSignList) {
+        this.gamePlayerList = gamePlayerList;
         this.gameTeams = gameTeams;
         this.gamePlayers = gamePlayers;
         this.flagSpawnPoint = flagSpawnPoint;
+        this.gamePNJList = gamePNJList;
+        this.gameRessourceSpawnerList = gameRessourceSpawnerList;
+        this.gameSignList = gameSignList;
     }
 
     public enum State {
         LOBBY, START, PREPARATION, FLAGWAR, END, MAP_REGEN
+    }
+
+    public @NotNull List<GamePlayer> getGamePlayerList() {
+        return gamePlayerList;
     }
 
     public @NotNull State getGameState() {
@@ -46,5 +62,17 @@ public final class GameInstance {
 
     public void setGameState(final @NotNull State gameState) {
         this.gameState = gameState;
+    }
+
+    public @NotNull List<GamePNJ> getGamePNJList() {
+        return gamePNJList;
+    }
+
+    public @NotNull List<GameRessourceSpawner> getGameRessourceSpawnerList() {
+        return gameRessourceSpawnerList;
+    }
+
+    public @NotNull List<GameSign> getGameSignList() {
+        return gameSignList;
     }
 }
