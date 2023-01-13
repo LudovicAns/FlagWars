@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 public final class GamePlayer {
 
     public enum State {
-        ALIVE, DEAD, SPECTATE
+        ALIVE, DEAD, SPECTATE, DISCONNECTED
     }
 
     @NotNull private final Player player;

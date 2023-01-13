@@ -35,4 +35,8 @@ public final class GameSign {
     public GameInstance getGameInstance() {
         return gameInstance;
     }
+
+    public boolean isGameSign(final @NotNull Sign sign) {
+        return this.sign.equals(sign);
+    }
 }
